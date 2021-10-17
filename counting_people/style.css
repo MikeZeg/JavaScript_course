@@ -1,0 +1,55 @@
+/* [Table of contents]
+
+  1.0 Main
+    1.1 Body style
+    1.2 H tag style
+  2.0 Other
+    2.1 Button
+    2.2 #increment-btn
+    2.3 #save-btn
+*/
+
+
+            /* 1.0 Main */
+
+/* 1.1 Body */
+body {
+  background-image: url();
+  background-size: cover;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 1.2 H Tag*/
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* 2.0 Other */
+
+/* 2.1 Button */
+button: {
+  border:none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* 2.2 #increment-btn */
+#increment-btn {
+  background: darkred;
+}
+/* 2.3 #save-btn */
+#save-btn {
+  background: darkgreen;
+}

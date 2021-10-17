@@ -9,13 +9,18 @@
     2.3 #save-btn
 */
 
-
             /* 1.0 Main */
 
 /* 1.1 Body */
 body {
-  background-image: url();
-  background-size: cover;
+  background-image: url(img/entry.jpg);
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+
+  position: relative;
   font-weight: bold;
   text-align: center;
 }
@@ -53,3 +58,8 @@ button: {
 #save-btn {
   background: darkgreen;
 }
+
+@media only screen and (min-width: 850px) {
+  body {
+    background-size: 100% 100%;
+  }

@@ -1,0 +1,55 @@
+/* Styling the game
+
+1.0 Body style
+2.0 Welcome User tags
+3.0 Start Tag
+*/
+
+/* 1.0 */
+body {
+  background-color: gray;
+  background-image: url("img/table.jpg");
+  color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+/* 2.0 */
+h1 {
+  margin-top: 5%;
+  margin-left: -70%;
+  color: #e94822;
+}
+#game-result{
+  position: relative;
+  left: 25%;
+  top:280px;
+}
+#player-el{
+  margin-left:50%;
+  color:goldenrod;
+}
+
+/* 3.0 */
+button {
+  color: #016f32;
+  width: 150px;
+  background-color: goldenrod;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  margin-top: 1%;
+  margin-left: -70%;
+}
+button:hover{
+  background: green;
+}
+#newCard-el{
+  position: relative;
+  margin-left:50%;
+  margin-top: 20%;
+}

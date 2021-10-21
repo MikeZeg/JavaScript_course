@@ -54,6 +54,7 @@ function gameStart() {
   let secondCard = getRandomCard();
   cards = [firstCard, secondCard];
   sum = firstCard + secondCard;
+  document.getElementById('message-el').style.color="black";
   renderGame();
 }
 
@@ -69,9 +70,11 @@ function renderGame() {
     }else if (sum === 21) {
       message = "Wohoo!! You've got BlackJack! ";
       sumEl.textContent ="Sum:" + sum;
+      document.getElementById('message-el').style.color="red";
       hasBlackJack = true;
     }else {
       message = "You're out of game";
+      document.getElementById('message-el').style.color="blue";
       sumEl.textContent ="Sum:" + sum;
       isAlive = false;
     }

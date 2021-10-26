@@ -3,24 +3,41 @@
 // array
 let myLeads = [];
 
-//Variables
 
+//Variables
 let text = "";
+
+//Local Storage
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+// console.log(leadsFromLocalStorage);
 
 
 
 //Catcher Elements
 const inputEl = document.getElementById('input-el');
 const ulEl = document.getElementById("ul-el");
+const inputBtn = document.getElementById("input-btn");
+const deletBtn = document.getElementById("delete-btn");
 
-
-document.getElementById("input-btn").addEventListener("click", function (){
+//Action - Event listener
+inputBtn.addEventListener("click", function (){
 
   myLeads.push(inputEl.value);
   renderLeads();
   inputEl.value = "";
+
+//Save in local Storage
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
 });
 
+deletBtn.addEventListener("dblclick", function (){
+  localStorage.clear();
+  myLeads = [];
+  renderLeads();
+});
+
+
+//Function
 function renderLeads(){
     let listItem = "";
 
@@ -44,16 +61,7 @@ function renderLeads(){
     }
     ulEl.innerHTML = listItem;
 }
-
-
-//Task
-
-const recipient = "James";
-const sender = "Michal";
-
-const email =  `
-  Hey ${recipient}!
-  How its going?
-  Cheers ${sender}.
-`
-console.log(email);
+if (leadsFromLocalStorage){
+  myLeads = leadsFromLocalStorage;
+  renderLeads();
+}

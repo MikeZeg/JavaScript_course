@@ -4,8 +4,6 @@
 let myLeads = [];
 
 
-
-
 //Variables
 let text = "";
 

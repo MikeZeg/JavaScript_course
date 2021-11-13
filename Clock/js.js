@@ -23,17 +23,26 @@ function setDate(){
   const hourDegrees = ((hour/12)*360)+90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
-if(seconds < 10){
-  digitTimer.innerText = hour + " : " + minutes + " : " + "0" + seconds;
-}else
-  digitTimer.innerText = hour + " : " + minutes + " : " + seconds;
 
+if(seconds < 10 && minutes > 10 && hour > 10 ){
+  digitTimer.innerText = hour + " : " +  minutes + " : " + "0" + seconds;
+}else if(seconds < 10 && minutes< 10 && hour > 10){
+    digitTimer.innerText = hour + " : " + "0" +minutes + " : " + "0" + seconds;
+}else if (seconds < 10 && minutes < 10 && hour < 10){
+  digitTimer.innerText = "0"+hour + " : " + "0" +minutes + " : " + "0" + seconds;
+}else if(seconds > 10 && minutes > 10 && hour < 10 ){
+  digitTimer.innerText = "0"+hour + " : " + minutes + " : " + seconds;
+}else if (seconds > 10 && minutes<10 && hour < 10){
+  digitTimer.innerText = "0"+hour + " : " + "0" + minutes + " : " + seconds;
+}else if(seconds > 10 && minutes < 10 && hour > 10){
+  digitTimer.innerText = hour + " : " + "0" + minutes + " : " + seconds;
+}
+else{
+  digitTimer.innerText =  hour + " : " + minutes + " : " +seconds;
+}
   console.log(seconds);
   console.log("to sa minuty: "+ minutes);
   console.log("to sa godziny: "+ hour);
-
 }
-
-
 
 setInterval(setDate,1000);
